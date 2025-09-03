@@ -2,4 +2,41 @@ header {
     background: #FF7276;
     padding: 2rem;
     grid-column: 1 / 4;
+    color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    margin: 0 auto 2rem;
+    max-width: 90vw;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #333;
+    align-items: center;
+}
+
+.navigation li {
+    flex: 1 1 auto;
+}
+
+.navigation a {
+    display: block;
+    color: #eee;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navigation a:hover {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: white;
 }
