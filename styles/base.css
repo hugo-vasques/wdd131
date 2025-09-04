@@ -74,7 +74,7 @@ nav ul li {
     flex: 1 0 auto;
 }
 
-.card {
+.card-about-section {
     background: #66D7D1;
     padding: 1rem;
     border-radius: 8px;
@@ -90,4 +90,41 @@ nav ul li {
     text-align: center;
     color: white;
     display: block;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about-content img {
+    padding-top: 1rem;
+}
+
+.about-content p {
+    flex: 1;
+}
+
+.caja-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row-reverse;
+}
+
+.caja-content img {
+    padding-top: 1rem;
+}
+
+.caja-content p {
+    flex: 1;
+}
+
+p {
+    padding-top: 1rem;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 1.3rem;
+    text-align: justify;
+    color: #333;
 }

@@ -14,6 +14,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles/base.css">
     <title>WDD 131 - Dynamic Web Fundamentals - Hugo Vasquez Paredes</title>
+    <script src="getdates.js" defer></script>
 </head>
 
 <body>
@@ -32,26 +33,34 @@
     </header>
 
     <main>
-        <section class="card">
+        <section class="card-about-section">
             <h1>About Me</h1>
-            <img src="images/pfp.jpeg" alt="My profile picture" width="200">
-            <p>Hey there! I'm Hugo. I was born in Cajamarca, Peru and I live with my family here at Cajamarca City. Some
-                things that I like to do are hang out with my friends,
-                play videogames and cooking (that is one of my favorite hobbies), I also enjoy to code in my free time,
-                more to
-                practice some concepts that I've been learning through this path. I'm so excited to continue this
-                journey with
-                everyone :D
-            </p>
+            <div class="about-content">
+                <img class="profile" src="images/pfp.jpeg" alt="My profile picture" width="200">
+                <p>Hey there! I'm Hugo. I was born in Cajamarca, Peru and I live with my family here at Cajamarca City.
+                    Some
+                    things that I like to do are hang out with my friends,
+                    play videogames and cooking (that is one of my favorite hobbies), I also enjoy to code in my free
+                    time,
+                    more to
+                    practice some concepts that I've been learning through this path. I'm so excited to continue this
+                    journey with
+                    everyone :D
+                </p>
+            </div>
         </section>
-        <section class="card">
+        <section class="card-about-section">
             <h1>Cajamarca, Peru</h1>
-            <img src="images/city.jpg" alt="My city picture" width="200">
-            <p>Cajamarca, located in the northern highlands of Peru, is a historic city where the Incas and the Spanish
-                met. It is
-                known for its impressive Andean landscapes, dairy farming, colorful Carnival celebrations, and iconic
-                sites such as
-                Atahualpa's Ransom Room, the Otuzco Windows, and its hot springs.</p>
+            <div class="caja-content">
+                <img src="images/city.jpg" alt="My city picture" width="200">
+                <p>Cajamarca, located in the northern highlands of Peru, is a historic city where the Incas and the
+                    Spanish
+                    met. It is
+                    known for its impressive Andean landscapes, dairy farming, colorful Carnival celebrations, and
+                    iconic
+                    sites such as
+                    Atahualpa's Ransom Room, the Otuzco Windows, and its hot springs.</p>
+            </div>
         </section>
     </main>
 
@@ -61,13 +70,6 @@
             <span id="lastModified"></span>
         </p>
     </footer>
-
-    <script>
-        document.getElementById("currentyear").textContent = new Date().getFullYear();
-
-        document.getElementById("lastModified").textContent =
-            "Last Modification: " + document.lastModified;
-    </script>
 </body>
 
 </html>
