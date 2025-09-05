@@ -1,5 +1,6 @@
 header span,
-h1 {
+h1,
+h2 {
     font-family: 'Funnel Sans', sans-serif;
     background-color: #FF637D;
     padding: 1rem;
