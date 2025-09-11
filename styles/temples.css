@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header span {
+    font-family: 'Funnel Sans', sans-serif;
+    background-color: #c5283d;
+    padding: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    display: block;
+}
+
+nav {
+    background-color: #ffc857;
+    margin: 0 auto;
+    max-width: 800px;
+    font-family: 'Funnel Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #f2a541;
+    color: white;
+    border-radius: 8px;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.open {
+    display: block;
+}
+
+nav.open {
+    display: flex;
+}
