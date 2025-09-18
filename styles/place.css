@@ -88,14 +88,19 @@ header {
 }
 
 @media (max-width: 600px) {
+    .hero {
+        height: auto;
+    }
+
     .content {
         position: static;
         transform: none;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 1rem;
+        margin: 1rem auto;
         gap: 20px;
+        width: 100%;
     }
 
     .box {
