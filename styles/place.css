@@ -1,3 +1,8 @@
+:root {
+    --primary-color: #c5283d;
+    --secondary-color: #255f85;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +11,7 @@
 
 header {
     font-family: 'Funnel Sans', sans-serif;
-    background-color: #c5283d;
+    background-color: var(--primary-color);
     padding: 1rem;
     border: 1px solid rgb(0 0 0 / 10%);
     font-size: 2rem;
@@ -108,9 +113,10 @@ header {
     }
 }
 
+
 footer {
     font-family: 'Funnel Sans', sans-serif;
-    background-color: #255f85;
+    background-color: var(--secondary-color);
     padding: 1rem;
     border: 1px solid rgb(0 0 0 / 10%);
     font-size: 2rem;
