@@ -15,7 +15,6 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles/place.css">
-    <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
@@ -47,12 +46,13 @@
 
                 <section class="box weather">
                     <h2 class="weather">Weather</h2>
-                    <img src="images/weather-icon.svg" alt="Weather icon" class="icon"> 
+                    <img src="images/weather-icon.svg" alt="Weather icon" class="icon">
+
                     <ul>
-                        <li><span class="label">Temperature:</span> <span class="value">10 °C</span></li>
-                        <li><span class="label">Conditions:</span> <span class="value">Partly Cloudy</span></li>
-                        <li><span class="label">Wind:</span> <span class="value">5 km/h</span></li>
-                        <li><span class="label">Wind Chill:</span> <span class="value" id="windChill">N/A</span></li>
+                        <li><span class="label">Temperature:</span> <span class="value" id="temp">---</span></li>
+                        <li><span class="label">Conditions:</span> <span class="value" id="desc">---</span></li>
+                        <li><span class="label">Wind:</span> <span class="value" id="wind">---</span></li>
+                        <li><span class="label">Wind Chill:</span> <span class="value" id="windChill">---</span></li>
                     </ul>
                 </section>
             </div>
@@ -60,9 +60,13 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> | Hugo Vasquez Paredes | Peru</p>
-        <p>Last Modification: <span id="lastModified"></span></p>
+        <p class="footer-text">
+            &copy; <span id="currentyear"></span> Hugo Vasquez Paredes - Cajamarca |
+            <span id="lastModified"></span>
+        </p>
     </footer>
+
+    <script src="scripts/place.js" defer></script>
 </body>
 
 </html>
