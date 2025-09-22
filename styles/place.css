@@ -113,6 +113,30 @@ header {
     }
 }
 
+h2.weather::after {
+    content: "☀️";
+    margin-left: 10px;
+}
+
+.icon-mobile {
+    display: none;
+}
+
+@media (max-width: 650px) {
+
+    h2.weather::after {
+        content: "";
+    }
+
+    .icon-mobile {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+}
+
 
 footer {
     font-family: 'Funnel Sans', sans-serif;
