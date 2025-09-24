@@ -96,3 +96,21 @@ const temples = [
     },
 
 ];
+
+// Cards //
+const container = document.querySelector(".container");
+
+temples.forEach(temple => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+        <h3>${temple.templeName}</h3>
+        <p><strong>Location:</strong> ${temple.location}</p>
+        <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+        <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
+        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+    `;
+
+    container.appendChild(card);
+});
