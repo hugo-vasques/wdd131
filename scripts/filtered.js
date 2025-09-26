@@ -114,3 +114,61 @@ temples.forEach(temple => {
 
     container.appendChild(card);
 });
+
+function displayTemples(templesToDisplay) {
+    const container = document.querySelector(".container");
+    container.innerHTML = "";
+
+    templesToDisplay.forEach(temple => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        card.innerHTML = `
+            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+            <h3>${temple.templeName}</h3>
+            <p><strong>Location:</strong> ${temple.location}</p>
+            <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+            <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
+        `;
+
+        container.appendChild(card);
+    });
+}
+// Temples Filter
+
+displayTemples(temples);
+
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const filter = e.target.textContent;
+
+        let filtered = [];
+
+        switch (filter) {
+            case "Home":
+                filtered = temples;
+                break;
+            case "Old":
+                filtered = temples.filter(t => {
+                    const year = parseInt(t.dedicated.split(",")[0]);
+                    return year < 1900;
+                });
+                break;
+            case "New":
+                filtered = temples.filter(t => {
+                    const year = parseInt(t.dedicated.split(",")[0]);
+                    return year > 2000;
+                });
+                break;
+            case "Large":
+                filtered = temples.filter(t => t.area > 90000);
+                break;
+            case "Small":
+                filtered = temples.filter(t => t.area < 10000);
+                break;
+        }
+
+        displayTemples(filtered);
+    });
+});
