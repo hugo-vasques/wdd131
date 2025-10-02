@@ -1,0 +1,56 @@
+header {
+    text-align: center;
+    background-color: #CC010A;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 1.2rem;
+}
+
+header h1 {
+    color: #FFFFFF;
+}
+
+h1,
+h2,
+h3 {
+    color: #CC010A;
+    font-family: "Funnel Sans", sans-serif;
+}
+
+h3 {
+    color: #72B800;
+}
+
+section {
+    border: 1px solid #72B800;
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+li {
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 1.2rem;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    background-color: #CC010A;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+}
