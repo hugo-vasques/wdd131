@@ -1,0 +1,32 @@
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+legend {
+    font-size: 24px;
+    font-family: "Funnel Sans", sans-serif;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Archivo Narrow", sans-serif;
+}
+
+header,
+footer {
+    font-family: 'Funnel Sans', sans-serif;
+    background-color: #c5283d;
+    padding: .5rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    font-size: 1.8rem;
+    text-align: center;
+    color: white;
+    display: block;
+}
