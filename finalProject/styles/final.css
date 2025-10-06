@@ -1,0 +1,159 @@
+:root {
+    --primary-color: #8B0000;
+    --secondary-color: #FFD700;
+    --backgrounC: #F5DEB3;
+    --textC: #333;
+}
+
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header span,
+footer {
+    font-family: 'Funnel Sans', sans-serif;
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    font-size: 1.8rem;
+    text-align: center;
+    color: white;
+    display: block;
+}
+
+header span {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+
+main {
+    padding: 0 2%;
+    min-height: 20rem;
+}
+
+body {
+    font-family: 'Funnel Sans', sans-serif;
+    color: var(--textC);
+    background-color: var(--backgrounC);
+}
+
+/*----- NAV BAR -----*/
+
+
+nav {
+    background-color: #ffc857;
+    width: 100%;
+    font-family: 'Funnel Sans', sans-serif;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    color: var(--textC);
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.navigation a {
+    width: 100%;
+}
+
+nav a:hover {
+    background-color: #f2a541;
+    color: white;
+    border-radius: 8px;
+    transform: scale(1.1);
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav.open {
+    display: flex;
+}
+
+/* ----- MOBILE LAYOUT ----- */
+
+@media (max-width: 1023px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .navigation {
+        display: block;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 25px;
+    }
+}
+
+/* ----- BODY ----- */
+
+body {
+    font-family: 'Funnel Sans', sans-serif;
+    font-size: 1.2rem;
+}
