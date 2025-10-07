@@ -162,7 +162,7 @@ body {
 
 .hero {
     position: relative;
-    height: 95vh;
+    height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,6 +172,7 @@ body {
 }
 
 .hero-bg {
+    padding-top: 3rem;
     position: absolute;
     inset: 0;
     width: 100%;
@@ -215,4 +216,87 @@ body {
     background-color: #FFD700;
     color: var(--textC);
     transform: scale(1.05);
+}
+
+
+.intro {
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+    color: #2E2E2E;
+}
+
+.intro h2 {
+    font-family: "Funnel Sans", sans-serif;
+    font-size: 4rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    font-family: "Source Sans", sans-serif;
+    font-size: 1.1rem;
+    color: var(--textC);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.regions {
+    text-align: center;
+    background-color: #F5DEB3;
+    padding: 3rem 1rem;
+}
+
+.regions h2 {
+    font-family: "Funnel Sans", sans-serif;
+    font-size: 4rem;
+    color: #8B0000;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.region-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.region-grid img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.region-grid article {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.region-grid article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.region-grid h3 {
+    font-family: "Funnel Sans", sans-serif;
+    font-size: 2rem;
+    color: #8B0000;
+    margin-top: 0.5rem;
+}
+
+.region-grid p {
+    padding: 0 1rem 1rem;
+    color: #2E2E2E;
+    font-size: 1.3rem;
+    font-family: "Source Sans", sans-serif;
 }
