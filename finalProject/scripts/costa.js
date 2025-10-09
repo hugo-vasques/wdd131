@@ -1,9 +1,8 @@
 document.getElementById("currentyear").textContent = new Date().getFullYear();
-
 document.getElementById("lastModified").textContent =
     "Last Modification: " + document.lastModified;
 
-// Button type "Hamburguer" //
+// Botón Hamburguesa
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
 
