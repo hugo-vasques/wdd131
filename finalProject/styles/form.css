@@ -315,8 +315,21 @@ main {
 }
 
 .required {
-    color: red;
+    color: var(--primary-color);
     font-weight: bold;
+}
+
+.wfl label {
+    color: #5c0b00;
+}
+
+.wfl fieldset:nth-of-type(2) p,
+.pRate {
+    color: #2a2a2a;
+}
+
+.required {
+    color: #700000;
 }
 
 #product:required:invalid {
