@@ -1,0 +1,335 @@
+:root {
+    --primary-color: #8B0000;
+    --secondary-color: #FFD700;
+    --backgrounC: #F5DEB3;
+    --textC: #333;
+}
+
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header span,
+footer {
+    font-family: 'Funnel Sans', sans-serif;
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    font-size: 1.8rem;
+    text-align: center;
+    color: white;
+    display: block;
+}
+
+header span {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+
+main {
+    padding: 0 2%;
+    min-height: 20rem;
+}
+
+body {
+    font-family: 'Funnel Sans', sans-serif;
+    color: var(--textC);
+    background-color: var(--backgrounC);
+}
+
+/*----- NAV BAR -----*/
+
+
+nav {
+    background-color: #ffc857;
+    width: 100%;
+    font-family: 'Funnel Sans', sans-serif;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    color: var(--textC);
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.navigation a {
+    width: 100%;
+}
+
+nav a:hover {
+    background-color: #f2a541;
+    color: white;
+    border-radius: 8px;
+    transform: scale(1.1);
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav.open {
+    display: flex;
+}
+
+/* ----- MOBILE LAYOUT ----- */
+
+@media (max-width: 1023px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .navigation {
+        display: block;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 25px;
+    }
+}
+
+/* ----- BODY ----- */
+
+.info {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    font-family: 'Source Sans 3', sans-serif;
+    color: #2E2E2E;
+}
+
+.info h1,
+.featured h2 {
+    margin-top: -1.7rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #8B0000;
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    line-height: 1.8;
+    flex-wrap: wrap;
+}
+
+.about-img {
+    width: 45%;
+    border-radius: 12px;
+    border: 3px solid rgba(192, 128, 32, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+}
+
+.about-content p {
+    width: 50%;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img,
+    .about-content p {
+        width: 100%;
+    }
+}
+
+.featured h2 {
+    margin-bottom: -1rem;
+}
+
+.gallery {
+    margin: 1rem auto;
+    max-width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-gap: 25px;
+    place-items: center;
+}
+
+figure {
+    background-color: #fff;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin: .5rem;
+}
+
+figcaption {
+    font-family: "Funnel Sans", sans-serif;
+    text-align: center;
+}
+
+.hover:hover {
+    box-shadow: 0 0 50px #333;
+}
+
+@media (min-width: 1024px) {
+
+    .navigation {
+        display: block;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 25px;
+    }
+}
+
+.regions {
+    text-align: center;
+    background-color: #F5DEB3;
+    padding: 3rem 1rem;
+}
+
+.regions h2 {
+    font-family: "Funnel Sans", sans-serif;
+    font-size: 4rem;
+    color: #8B0000;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.region-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.region-grid article {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    padding: 0;
+}
+
+.region-grid img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    margin: 0;
+}
+
+.region-grid article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.region-grid h3 {
+    font-family: "Funnel Sans", sans-serif;
+    font-size: 2.2rem;
+    color: #8B0000;
+    margin-top: 0.5rem;
+}
+
+.region-grid p {
+    line-height: 2.5rem;
+    padding: 0 1rem 1rem;
+    color: #2E2E2E;
+    font-size: 1.3rem;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+@media (max-width: 768px) {
+    .region-grid {
+        grid-template-columns: 1fr;
+    }
+}
