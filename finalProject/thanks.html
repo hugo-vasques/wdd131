@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Review Submitted</title>
+    <title>Peru got Taste - Thank You!</title>
     <link rel="stylesheet" href="styles/thanks.css">
 </head>
 
@@ -11,15 +11,15 @@
     <div class="confirmation">
         <h1>Thank you!</h1>
         <p>Your review has been submitted successfully.</p>
-
         <p>Total reviews submitted: <span id="review-count"></span></p>
-
         <a href="form.html">← Back to Form</a>
     </div>
 
     <script>
-        let count = localStorage.getItem("reviewCount") || 0;
-        document.querySelector("#review-count").textContent = count;
+        document.addEventListener("DOMContentLoaded", () => {
+            const count = localStorage.getItem("tasteReviewCount") || 0;
+            document.getElementById("review-count").textContent = count;
+        });
     </script>
 </body>
 

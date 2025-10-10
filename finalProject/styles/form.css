@@ -157,7 +157,8 @@ main {
 }
 
 .wfl fieldset {
-    margin: 2rem 0;
+    position: relative;
+    margin: 3.5rem 0;
     border: 2px solid var(--primary-color);
     border-radius: 6px;
     padding: .5rem 2%;
@@ -166,10 +167,15 @@ main {
 
 .wfl legend {
     color: var(--primary-color);
-    padding: 0 .5rem;
-    text-align: center;
     font-family: "Source Sans 3", sans-serif;
     font-size: 2rem;
+    position: absolute;
+    top: -2rem;
+    left: 1rem;
+    background-color: #eee;
+    padding: 0 .5rem;
+    font-weight: bold;
+    border-radius: 4px;
 }
 
 .wfl label {
@@ -215,15 +221,23 @@ main {
     border: none;
     background: var(--primary-color);
     color: #fff;
-    border-radius: 6px;
+    border-radius: 8px;
     padding: .8rem;
     width: 95%;
     max-width: 400px;
-    margin: 1rem auto;
-    box-shadow: 1px 1px 4px #999;
+    margin: 1.5rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-family: "Source Sans 3", sans-serif;
     font-size: 2rem;
     display: block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.wfl input[type="submit"]:hover {
+    background-color: #a50000;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
 .wfl input:required {
@@ -244,12 +258,12 @@ main {
     background-color: #eee;
     display: block;
     border: solid 1px #999;
-    border-radius: 6px;
-    padding: .75rem;
+    border-radius: 8px;
+    padding: 1rem;
     color: #555;
     width: 100%;
-    max-width: 400px;
-    min-height: 120px;
+    max-width: 500px;
+    min-height: 150px;
     resize: vertical;
     margin: 0 auto;
 }
@@ -260,6 +274,15 @@ main {
     align-items: center;
     gap: 6px;
     direction: rtl;
+    margin-top: 0.5rem;
+}
+
+.wfl fieldset:nth-of-type(2) p {
+    text-align: center;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
 }
 
 .rating input {
@@ -282,6 +305,13 @@ main {
 
 .rating input:checked~label {
     color: green;
+}
+
+::placeholder {
+    font-family: "Source Sans 3", sans-serif;
+    font-style: italic;
+    color: #888;
+    opacity: 0.9;
 }
 
 .required {
