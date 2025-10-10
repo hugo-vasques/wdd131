@@ -134,3 +134,60 @@ main {
     margin: 0 auto;
 }
 
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    direction: rtl;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    display: inline-block;
+    font-size: 2rem;
+    color: #a00;
+    cursor: pointer;
+    transition: color .15s ease;
+    user-select: none;
+}
+
+.rating label:hover,
+.rating label:hover~label {
+    color: #ffcc00;
+}
+
+.rating input:checked~label {
+    color: green;
+}
+
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+#product:required:invalid {
+    border-bottom: 2px solid red;
+}
+
+#product:required:valid {
+    border-bottom: 2px solid green;
+}
+
+fieldset.rating {
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    padding: .5rem 1rem;
+    transition: border-color .18s ease;
+}
+
+fieldset.rating:not(:has(input[name="rating"]:checked)) {
+    border-color: red;
+}
+
+fieldset.rating:has(input[name="rating"]:checked) {
+    border-color: green;
+}

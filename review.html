@@ -11,8 +11,25 @@
     <div class="confirmation">
         <h1>Thank you!</h1>
         <p>Your review has been submitted successfully.</p>
+
+        <p>Total reviews submitted: <span id="review-count"></span></p>
+
         <a href="form.html">← Back to Form</a>
     </div>
+
+    <script>
+        let count = localStorage.getItem("reviewCount");
+
+        if (!count) {
+            count = 0;
+            localStorage.setItem("reviewCount", count);
+        }
+
+        count++;
+        localStorage.setItem("reviewCount", count);
+
+        document.querySelector("#review-count").textContent = count;
+    </script>
 </body>
 
 </html>
