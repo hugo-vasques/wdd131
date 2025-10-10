@@ -3,6 +3,7 @@ document.getElementById("lastModified").textContent =
     "Last Modification: " + document.lastModified;
 
 /* --- Hamburguer Button --- */
+
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
 
