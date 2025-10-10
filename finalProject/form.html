@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Hugo Vasquez">
-    <meta name="description" content="A functional sub-page for the final project">
+    <meta name="description" content="Form to share your experience with Peruvian cuisine.">
     <title>Peru Got Taste! - Hugo Vasquez</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,8 +13,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
-    <link href="styles/sierra.css" rel="stylesheet">
-    <script src="scripts/sierra.js" defer></script>
+    <link href="styles/form.css" rel="stylesheet">
+    <script src="scripts/form.js" defer></script>
 </head>
 
 <body>
@@ -27,8 +27,66 @@
                 <li><a href="costa.html">Coast</a></li>
                 <li><a href="sierra.html">Sierra</a></li>
                 <li><a href="selva.html">Jungle</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="final.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
+
+    <main>
+        <form method="get" action="thanks.html" class="wfl">
+            <fieldset>
+                <legend>Contact Us</legend>
+
+                <label for="name">Full Name: <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required placeholder="e.g: Juan David">
+
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="+51 999 888 777">
+
+                <label for="subject">Case <span class="required">*</span></label>
+                <select id="subject" name="subject" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                    <option value="consulta">General consulation</option>
+                    <option value="reservas">Reservation</option>
+                    <option value="sugerencias">Suggestions</option>
+                    <option value="otro">Other</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Rate Us!</legend>
+                <p>What did you think about our site?</p>
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5" title="Excellent">★</label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4" title="Good">★</label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3" title="Mid">★</label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2" title="Bad">★</label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1" title="Oh my gosh">★</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your opinion also counts!</legend>
+                <label for="message">Share your thoughts with us</label>
+                <textarea id="message" name="message" placeholder="Write your message here..."></textarea>
+            </fieldset>
+
+            <input type="submit" value="Send message">
+        </form>
+    </main>
+
+    <footer>
+        <p class="footer-text">
+            &copy; <span id="currentyear"></span> Hugo Vasquez Paredes - Cajamarca |
+            <span id="lastModified"></span>
+        </p>
+    </footer>
 </body>

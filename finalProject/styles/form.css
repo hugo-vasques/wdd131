@@ -1,0 +1,313 @@
+:root {
+    --primary-color: #8B0000;
+    --secondary-color: #FFD700;
+    --backgrounC: #F5DEB3;
+    --textC: #333;
+}
+
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header span,
+footer {
+    font-family: 'Funnel Sans', sans-serif;
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    font-size: 1.8rem;
+    text-align: center;
+    color: white;
+    display: block;
+}
+
+header span {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+
+main {
+    padding: 0 2%;
+    min-height: 20rem;
+}
+
+body {
+    font-family: 'Funnel Sans', sans-serif;
+    color: var(--textC);
+    background-color: var(--backgrounC);
+}
+
+/*----- NAV BAR -----*/
+
+
+nav {
+    background-color: #ffc857;
+    width: 100%;
+    font-family: 'Funnel Sans', sans-serif;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    color: var(--textC);
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.navigation a {
+    width: 100%;
+}
+
+nav a:hover {
+    background-color: #f2a541;
+    color: white;
+    border-radius: 8px;
+    transform: scale(1.1);
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav.open {
+    display: flex;
+}
+
+/* ----- MOBILE LAYOUT ----- */
+
+@media (max-width: 1023px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .navigation {
+        display: block;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 25px;
+    }
+}
+
+main {
+    padding: 0 2%;
+    min-height: 20rem;
+}
+
+.wfl fieldset {
+    margin: 2rem 0;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    padding: .5rem 2%;
+    background-color: #eee;
+}
+
+.wfl legend {
+    color: var(--primary-color);
+    padding: 0 .5rem;
+    text-align: center;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 2rem;
+}
+
+.wfl label {
+    display: flex;
+    align-items: center;
+    padding-top: .8rem;
+    padding-bottom: .9rem;
+    color: #9c2c13;
+    font-size: 1.2rem;
+    gap: 0.5rem;
+}
+
+.wfl div {
+    padding-top: 1rem;
+    color: var(--primary-color);
+    font-size: .9rem;
+}
+
+.wfl input[type="text"],
+.wfl input[type="tel"],
+.wfl input[type="email"],
+.wfl input[type="url"],
+.wfl input[type="date"],
+.wfl select,
+.wfl input[type="number"] {
+    background-color: #eee;
+    display: block;
+    border: solid 1px #999;
+    border-radius: 8px;
+    padding: .70rem;
+    color: #555;
+    width: 100%;
+    max-width: 400px;
+    appearance: none;
+}
+
+.wfl input[type="radio"],
+.wfl input[type="checkbox"] {
+    margin-right: 0;
+}
+
+.wfl input[type="submit"] {
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 6px;
+    padding: .8rem;
+    width: 95%;
+    max-width: 400px;
+    margin: 1rem auto;
+    box-shadow: 1px 1px 4px #999;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 2rem;
+    display: block;
+}
+
+.wfl input:required {
+    border-bottom: solid 2px red;
+}
+
+.wfl input:required:valid {
+    border-bottom: solid 8px green;
+}
+
+.wfl {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.wfl textarea {
+    background-color: #eee;
+    display: block;
+    border: solid 1px #999;
+    border-radius: 6px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 400px;
+    min-height: 120px;
+    resize: vertical;
+    margin: 0 auto;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    direction: rtl;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    display: inline-block;
+    font-size: 2rem;
+    color: #a00;
+    cursor: pointer;
+    transition: color .15s ease;
+    user-select: none;
+}
+
+.rating label:hover,
+.rating label:hover~label {
+    color: #ffcc00;
+}
+
+.rating input:checked~label {
+    color: green;
+}
+
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+#product:required:invalid {
+    border-bottom: 2px solid red;
+}
+
+#product:required:valid {
+    border-bottom: 2px solid green;
+}
+
+fieldset.rating {
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    padding: .5rem 1rem;
+    transition: border-color .18s ease;
+}
+
+fieldset.rating:not(:has(input[name="rating"]:checked)) {
+    border-color: red;
+}
+
+fieldset.rating:has(input[name="rating"]:checked) {
+    border-color: green;
+}
