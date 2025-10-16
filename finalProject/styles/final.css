@@ -220,12 +220,14 @@ body {
 
 
 .intro {
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem 1rem;
+    margin: 0 auto;
+    max-width: 90%;
+    box-sizing: border-box;
 }
 
 .intro h2 {
@@ -239,9 +241,13 @@ body {
 
 @media (max-width: 600px) {
     .intro h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
         text-align: center;
-        padding: 0 1rem;
+    }
+
+    .intro {
+        max-width: 100%;
+        padding: 1rem;
     }
 }
 
