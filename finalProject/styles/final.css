@@ -233,6 +233,15 @@ body {
     color: var(--primary-color);
     text-align: center;
     margin-bottom: 1rem;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+    .intro h2 {
+        font-size: 2rem;
+        padding: 0 10px;
+    }
 }
 
 .intro p {
